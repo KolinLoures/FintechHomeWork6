@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kolin.fintechhomework6.MainActivity">
+
+    <Button
+        android:id="@+id/main_activity_btn_first_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/first_task"/>
+
+    <Button
+        android:id="@+id/main_activity_btn_second_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/second_task"/>
+    <Button
+        android:id="@+id/main_activity_btn_third_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/third_task"/>
+
+    <Button
+        android:id="@+id/main_activity_btn_fourth_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fourth_task"/>
+
+
+</LinearLayout>

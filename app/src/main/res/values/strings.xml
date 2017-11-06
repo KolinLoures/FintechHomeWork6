@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FintechHomeWork6</string>
+    <string name="first_task">first task</string>
+    <string name="second_task">Second task</string>
+    <string name="third_task">Third task</string>
+    <string name="fourth_task">Fourth task</string>
+</resources>
