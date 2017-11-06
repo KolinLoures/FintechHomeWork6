@@ -4,4 +4,34 @@
     <string name="second_task">Second task</string>
     <string name="third_task">Third task</string>
     <string name="fourth_task">Fourth task</string>
+    <string name="test_data">Test data:</string>
+    <string name="do_it">do it</string>
+
+
+    <string-array name="desc_task">
+        <item>
+            Реализовать механизм исключения ненужных
+            полей из сериализации gson\'ом, не используя
+            ключевое слово transient
+        </item>
+
+        <item>
+            Парсить поле "any_map" в интерфейс Map в таком джейсоне — \n
+            {\"name\":\"name\",\"any_map\":{\"a\":\"55\",\"b\":\"85\",\"c\":\"56\"}}; \n
+            Но сделать так, что gson подставлял HashMap в качестве реализации поля \"any_map\",
+            а не какую-либо иную
+        </item>
+
+        <item>
+            Сделать так, что в этой джейсоне — \n
+            {\"money_amount\":\"2444,88\"} \n
+            — поле "money_amount" парсилось в BigDecimal
+        </item>
+
+        <item>
+            Сериализовать объект класса в котором содержиться поле типа Date,
+            таким образом, чтобы на в конечной json-строке дата была в формате\n\"yyyy-MM-dd\".
+        </item>
+
+    </string-array>
 </resources>
