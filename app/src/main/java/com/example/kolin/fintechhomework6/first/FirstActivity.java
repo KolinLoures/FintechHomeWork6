@@ -33,6 +33,11 @@ public class FirstActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle(R.string.first_task);
+        }
+
         initGson();
         testData = createTestData();
 
@@ -75,5 +80,12 @@ public class FirstActivity extends AppCompatActivity {
                         })
                 .setPrettyPrinting()
                 .create();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        finish();
     }
 }

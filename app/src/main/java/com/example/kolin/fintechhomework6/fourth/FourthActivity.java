@@ -33,6 +33,11 @@ public class FourthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourth);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle(R.string.fourth_task);
+        }
+
         initGson();
         final DateExample testObject = createTestObject();
         int task = getIntent().getIntExtra(KEY_TASK, 0);
@@ -60,5 +65,12 @@ public class FourthActivity extends AppCompatActivity {
                 .setPrettyPrinting()
                 .setDateFormat("yyyy-MM-dd")
                 .create();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        finish();
     }
 }

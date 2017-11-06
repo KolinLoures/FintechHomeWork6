@@ -36,6 +36,11 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle(R.string.second_task);
+        }
+
         initGson();
         testJson = gson.toJson(createTestJson());
         int task = getIntent().getIntExtra(KEY_TASK, 0);
@@ -78,5 +83,10 @@ public class SecondActivity extends AppCompatActivity {
         return json;
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
 
+        finish();
+    }
 }

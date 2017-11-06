@@ -34,6 +34,11 @@ public class ThirdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle(R.string.third_task);
+        }
+
         initGson();
         testJson = gson.toJson(createTestJson());
         int task = getIntent().getIntExtra(KEY_TASK, 0);
@@ -63,5 +68,12 @@ public class ThirdActivity extends AppCompatActivity {
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("money_amount", "2444,88");
         return jsonObject;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        finish();
     }
 }
